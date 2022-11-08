@@ -33,7 +33,7 @@ array("nim"=>"SI-002", "nama_mahasiswa"=>"Wawan","program_studi"=>"Sistem Inform
 <?php
 
 $nomor = 1;
-foreach ($mahasiswa as $rows => $row)
+foreach ($mahasiswa as $data => $row)
 {
     echo "<tr>";
     echo "<td>$nomor</td>";

@@ -24,27 +24,33 @@
 
 // Daftar mahasiswa yang masuk kelompok Programmer PHP tapi tidak termasuk kelompok Programmer Python
     echo "<b>C. Daftar mahasiswa yang masuk kelompok Programmer PHP tapi tidak termasuk kelompok Programmer Python </b> <br/>";
-    print_r($programmer_php);
-    echo '<br>';
-    echo "<br/>";
+    $hasil = array_diff($programmer_php, $programmer_python) ;
+    echo "<ul>";
+    foreach ($hasil as $data)
+    {
+    echo "<li>$data</li>";
+    }
+    echo "</ul>";
 
 // Daftar mahasiswa yang masuk kelompok Programmer Python tapi tidak termasuk kelompok Programmer PHP
     echo "<b>D. Daftar mahasiswa yang masuk kelompok Programmer Python tapi tidak termasuk kelompok Programmer PHP </b> <br/>";
-    print_r($programmer_php);
-    echo '<br>';
-    echo "<br/>";
+    $hasil = array_diff($programmer_python, $programmer_php) ;
+    echo "<ul>";
+    foreach ($hasil as $data)
+    {
+    echo "<li>$data</li>";
+    }
+    echo "</ul>";
 
 //Daftar mahasiswa yang masuk kelompok Programmer PHP dan Programmer Python sekaligus
     echo "<b>E. Daftar mahasiswa yang masuk kelompok Programmer PHP dan Programmer Python sekaligus </b> <br/>";
-    echo "Kelompok Programmer PHP<br/>";
-    print_r($programmer_php);
-    echo "<br/>";
-    echo "<br/>";
-
-    echo "Kelompok Programmer PHP<br/>";
-    print_r($programmer_python);
-    echo '<br>';
-    echo "<br/>";
+    $hasil = array_intersect($programmer_php, $programmer_python) ;
+    echo "<ul>";
+    foreach ($hasil as $data)
+    {
+    echo "<li>$data</li>";
+    }
+    echo "</ul>";
 
 // penggunaan fungsi array_merge()
 echo "<b>F. Penggunaan Fungsi array_merge() </b> <br/>";
