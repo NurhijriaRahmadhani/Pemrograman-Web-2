@@ -8,18 +8,14 @@
     echo "<b>A. Programmer PHP dengan nama diurutkan secara Ascending</b> <br/>";
     sort($programmer_php);
     foreach ($programmer_php as $key => $val)
-{
-    echo "programmer PHP[" . $key . "] = " . $val . "<br>";
-}
+    { echo "programmer PHP[" . $key . "] = " . $val . "<br>"; }
     echo '<br>';
 
 // Programmer Python dengan nama diurutkan secara Descending
     echo "<b>B. Programmer PHP dengan nama diurutkan secara Descending </b> <br/>";
     rsort($programmer_python);
     foreach ($programmer_python as $key => $val)
-{
-    echo "programmer Python[" . $key . "] = " . $val . "<br>";
-}
+    { echo "programmer Python[" . $key . "] = " . $val . "<br>"; }
     echo '<br>';
 
 // Daftar mahasiswa yang masuk kelompok Programmer PHP tapi tidak termasuk kelompok Programmer Python
@@ -27,9 +23,7 @@
     $hasil = array_diff($programmer_php, $programmer_python) ;
     echo "<ul>";
     foreach ($hasil as $data)
-    {
-    echo "<li>$data</li>";
-    }
+    { echo "<li>$data</li>"; }
     echo "</ul>";
 
 // Daftar mahasiswa yang masuk kelompok Programmer Python tapi tidak termasuk kelompok Programmer PHP
@@ -37,9 +31,7 @@
     $hasil = array_diff($programmer_python, $programmer_php) ;
     echo "<ul>";
     foreach ($hasil as $data)
-    {
-    echo "<li>$data</li>";
-    }
+    { echo "<li>$data</li>"; }
     echo "</ul>";
 
 //Daftar mahasiswa yang masuk kelompok Programmer PHP dan Programmer Python sekaligus
@@ -47,9 +39,7 @@
     $hasil = array_intersect($programmer_php, $programmer_python) ;
     echo "<ul>";
     foreach ($hasil as $data)
-    {
-    echo "<li>$data</li>";
-    }
+    { echo "<li>$data</li>"; }
     echo "</ul>";
 
 // penggunaan fungsi array_merge()
@@ -65,4 +55,3 @@ echo "<b>F. Penggunaan Fungsi array_merge() </b> <br/>";
     print_r($programmer_php);
     echo '<br>';
     echo "<br/>";
-?>
